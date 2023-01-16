@@ -3,8 +3,8 @@ import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer lg:p-20 bg-black text-slate-200">
+    <div className='bg-black'>
+      <footer className="footer lg:p-20 text-slate-200">
         <div className='flex flex-col items-center'>
           <img className='h-14' src={logo} alt="" />
           <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
@@ -30,6 +30,7 @@ const Footer = () => {
           <a href="/" className="link link-hover">Cookie policy</a>
         </div>
       </footer>
+      <small className='text-white text-xs'>CAR SOLUTION © Md Jahirul Islam Tuku - 2023. All right reserved</small>
     </div>
   );
 };
