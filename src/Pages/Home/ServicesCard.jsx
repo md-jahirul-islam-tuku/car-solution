@@ -7,9 +7,9 @@ const ServicesCard = ({ service }) => {
   const {user} = useContext(AuthContext)
   const { title, img, price, _id } = service;
   return (
-    <div className="card w-full bg-gray-100 shadow-xl">
-      <figure className="px-3 pt-3">
-        <img src={img} alt="service" className="rounded-lg h-[28vh]                                                 " />
+    <div className="card w-full bg-gray-100 rounded-none shadow-xl">
+      <figure className="p-2">
+        <img src={img} alt="service" className="h-[28vh] w-full" />
       </figure>
       <div className="card-body">
         <h2 className="card-title font-bold">{title}</h2>
