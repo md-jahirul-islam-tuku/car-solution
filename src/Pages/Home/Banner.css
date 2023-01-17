@@ -1,4 +1,4 @@
-.image {
+#slide1 img {
    mask-image: linear-gradient(to right, rgb(0, 0, 0, 0) 0%, rgb(0, 0, 0) 120%);
    border-radius: 0.7rem;
 }
