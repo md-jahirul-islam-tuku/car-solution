@@ -4,7 +4,7 @@ const OrderDetails = ({ order, handleDelete }) => {
   const { serviceName, customer, phoneNumber, price, service, email, _id } = order;
   const [serv, setServ] = useState({})
   useEffect(() => {
-    fetch(`http://localhost:5001/services/${service}`)
+    fetch(`https://car-solution-server.vercel.app/services/${service}`)
       .then(res => res.json())
       .then(data => setServ(data))
   })

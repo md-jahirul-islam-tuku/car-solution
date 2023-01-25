@@ -22,7 +22,7 @@ const Login = () => {
           email: user.email
         }
 
-        fetch('http://localhost:5001/jwt', {
+        fetch('https://car-solution-server.vercel.app/jwt', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
@@ -38,12 +38,12 @@ const Login = () => {
     form.reset()
   }
   return (
-    <div className="h-[100vh] flex">
-      <div className="w-1/2 my-auto flex justify-end mr-20">
+    <div className="lg:h-[100vh] p-10 lg:flex">
+      <div className="lg:w-1/2 my-auto flex justify-end mr-20">
         <img src={img} alt="" />
       </div>
-      <div className="w-1/2 my-auto">
-        <form onSubmit={handleLogin} className="card-body w-3/5 bg-gray-100 shadow-xl rounded-xl">
+      <div className="lg:w-1/2 my-auto">
+        <form onSubmit={handleLogin} className="card-body lg:w-4/5 bg-gray-100 shadow-xl rounded-xl">
           <h1 className='text-3xl font-bold pt-10 pb-5'>Please Login</h1>
           <div className="form-control">
             <label className="label">

@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/userContext';
 import logo from '../../assets/logo.png'
+import { GiHamburgerMenu } from 'react-icons/gi';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Header = () => {
   const { user, userSignOut } = useContext(AuthContext);
@@ -10,11 +12,14 @@ const Header = () => {
   }
   const menu = <>
     <li className='font-semibold'><Link to="/" >Home</Link></li>
-    <li className='font-semibold'><Link to="/">About</Link></li>
-    <li className='font-semibold'><Link to="/">Services</Link></li>
-    <li className='font-semibold'><Link to="/">Products</Link></li>
-    <li className='font-semibold'><Link to="/">Used Car</Link></li>
-    <li className='font-semibold'><Link to="/orders">Orders</Link></li>
+    <li className='font-semibold'><AnchorLink href="#services">Services</AnchorLink></li>
+    <li className='font-semibold'><AnchorLink href="#products">Products</AnchorLink></li>
+    <li className='font-semibold'><AnchorLink href="#about">About</AnchorLink></li>
+    <li className='font-semibold'><AnchorLink href="#usedCar">Car Sale</AnchorLink></li>
+    <li className='font-semibold'><AnchorLink href="#contact">Contact</AnchorLink></li>
+    {
+      user ? <li className='font-semibold'><Link to="/orders">Orders</Link></li> : <li className='font-semibold'><Link to="/login">Orders</Link></li>
+    }
     {
       user ? <li className='font-semibold'><Link onClick={handleSignOut} to="/" >Sign out</Link></li> :
         <li className='font-semibold'><Link to="/login" >Login</Link></li>
@@ -26,7 +31,7 @@ const Header = () => {
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              <GiHamburgerMenu className='h-7 w-7'/>
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               {menu}
@@ -40,7 +45,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a href='/' className="btn btn-outline btn-primary">Appointment</a>
+          <Link to='/login' className="btn btn-outline btn-primary">Appointment</Link>
         </div>
       </div>
     </div>

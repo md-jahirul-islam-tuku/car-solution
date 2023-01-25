@@ -11,7 +11,7 @@ const ServicesCard = ({ service }) => {
     <div className='cardContainer flex items-center'>
       <div className="card1 bg-gray-100">
         <figure className="imgBox">
-          <img src={img} alt="service" />
+          <img src={img} alt="service" className='h-[22vh] animate__animated animate__pulse animate__infinite animate__slower' />
         </figure>
         <div className="content">
           <h2 className="text-xl font-bold text-left">{title}</h2>

@@ -23,7 +23,7 @@ const CheckOut = () => {
       phoneNumber,
       message
     }
-    fetch('http://localhost:5001/orders', {
+    fetch('https://car-solution-server.vercel.app/orders', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

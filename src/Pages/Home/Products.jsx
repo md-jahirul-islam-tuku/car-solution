@@ -6,7 +6,7 @@ const Product = ({product}) => {
    return (
       <div className="card w-full rounded-none shadow-xl bg-gray-100">
          <figure className="px-3 pt-3">
-            <img src={img} alt="products" className="h-[28vh]" />
+            <img src={img} alt="products" className="h-[28vh] animate__animated animate__pulse animate__infinite animate__slower" />
          </figure>
          <div className="card-body items-center text-center">
             <div className='flex text-lg gap-1'>

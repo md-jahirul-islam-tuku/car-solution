@@ -2,8 +2,8 @@ import React from 'react';
 
 const Article1 = () => {
   return (
-    <div className='grid grid-cols-3 px-14 gap-10 py-14'>
-      <div className='col-span-1 text-right font-thin border-r-8 pr-10 border-primary py-3'>
+    <div className='lg:grid grid-cols-3 px-14 gap-10 py-14'>
+      <div className='col-span-1 lg:text-right pb-7 font-thin border-b-8 lg:border-b-0 lg:border-r-8 lg:pr-10 border-primary py-3'>
         <h1 className='text-6xl text-gray-500'>High quality prestige vehicle sales in Bengal since 1998</h1>
       </div>
       <div className='col-span-2 text-lg font-light text-justify my-auto'>
