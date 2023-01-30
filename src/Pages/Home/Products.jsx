@@ -4,7 +4,7 @@ import { FaStar } from 'react-icons/fa';
 const Product = ({product}) => {
    const {name, img, price} = product;
    return (
-      <div className="card w-full rounded-none shadow-xl bg-gray-100">
+      <div className="cursor-pointer card w-full rounded-none shadow-xl bg-gray-100" data-aos="zoom-in-up" data-aos-duration="2000">
          <figure className="px-3 pt-3">
             <img src={img} alt="products" className="h-[28vh] animate__animated animate__pulse animate__infinite animate__slower" />
          </figure>

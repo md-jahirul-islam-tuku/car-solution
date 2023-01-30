@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 const Footer = () => {
   return (
     <div className='bg-black'>
-      <footer className="footer justify-center lg:justify-around p-10 lg:p-20 text-slate-200">
+      <footer className="footer justify-center lg:justify-around p-10 lg:p-20 text-slate-200 lg:w-[1024px] xl:w-[1280px] mx-auto">
         <div className='flex flex-col items-center'>
           <img className='h-14' src={logo} alt="" />
           <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>

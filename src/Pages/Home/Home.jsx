@@ -15,8 +15,8 @@ import { ReactComponent as MySVG } from "../../assets/icons/double-arrow-top-ico
 
 const Home = () => {
    return (
-      <div className='lg:px-20 px-10'>
-         <ScrollToTop component={<MySVG />} smooth="true" viewBox='0 0 150 280' style={{ backgroundColor: 'orange', padding: '5px'}} />
+      <div className='lg:w-[1024px] xl:w-[1280px] mx-auto overflow-hidden lg:px-0 px-6'>
+         <ScrollToTop component={<MySVG />} smooth="true" viewBox='0 0 150 280' style={{ backgroundColor: 'lightgray', padding: '5px'}} />
          <Banner />
          <CardGroup />
          <Services></Services>

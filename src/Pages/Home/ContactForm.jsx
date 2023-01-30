@@ -39,7 +39,7 @@ const ContactForm = () => {
   }
   return (
     <div>
-      <div className='lg:w-[67vw] lg:h-[80vh] 2xl:w-[50vw] mx-auto rounded-xl'>
+      <div className='lg:w-[67vw] lg:h-[70vh] 2xl:w-[50vw] mx-auto rounded-xl'>
         <h1 data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500" className='pt-10 text-3xl font-semibold text-primary'>Contact with us</h1>

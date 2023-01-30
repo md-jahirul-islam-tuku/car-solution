@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContext from './Contexts/userContext';
 import 'animate.css';
+import 'aos/dist/aos.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

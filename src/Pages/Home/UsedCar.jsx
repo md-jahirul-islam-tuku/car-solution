@@ -22,12 +22,12 @@ import car18 from '../../assets/images/UsedCar/genesis.jpg'
 const UsedCar = () => {
   return (
     <section id='usedCar'>
-      <div className='py-10'>
+      <div className='py-10' data-aos="zoom-in-up" data-aos-duration="2000">
         <h5 className='font-bold text-error text-lg'>Big Car Bazar</h5>
         <h1 className="text-5xl font-bold pb-4">Shop Used Car</h1>
         <p className='text-xl'>18 Best Hight MPG Used Cars for 2023: Reviews, Photos, and More details information.<br />Ask the Experts: If you have any question to know.</p>
       </div>
-      <div className='slider'>
+      <div className='slider' data-aos="zoom-in-up" data-aos-duration="2000">
         <div className='slide-track'>
           <div className="slide">
             <img src={car1} alt="img-1" />

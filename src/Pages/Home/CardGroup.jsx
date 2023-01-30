@@ -13,29 +13,29 @@ const CardGroup = () => {
       <div className='grid lg:grid-cols-2 gap-1 mb-1'>
         <div className='overflow-hidden relative photo'>
           <img src={img1} alt="" className='h-80 w-full' />
-          <h1 className='absolute cursor-pointer top-32 left-28 lg:left-48 text-6xl font-thin text-white uppercase'>Services</h1>
+          <h1 className='absolute cursor-pointer top-32 left-[32%] text-6xl font-thin text-white uppercase'>Services</h1>
         </div>
         <div className='overflow-hidden relative photo'>
           <img src={img2} alt="" className='h-80 w-full' />
-          <h1 className='absolute cursor-pointer top-32 left-20 lg:left-52 text-6xl font-thin text-white uppercase'>Workshop</h1>
+          <h1 className='absolute cursor-pointer top-32 left-[29%] text-6xl font-thin text-white uppercase'>Workshop</h1>
         </div>
       </div>
       <div className='grid grid-cols-2 lg:grid-cols-4 gap-1'>
         <div className='overflow-hidden relative photo'>
           <img src={img3} alt="" className='h-80 w-full' />
-          <h1 className='absolute cursor-pointer top-32 left-10 lg:left-12 text-3xl lg:text-5xl font-thin text-white uppercase'>Products</h1>
+          <h1 className='absolute cursor-pointer top-32 left-[15%] text-3xl lg:text-5xl font-thin text-white uppercase'>Products</h1>
         </div>
         <div className='overflow-hidden relative photo'>
           <img src={img4} alt="" className='h-80 w-full' />
-          <h1 className='absolute cursor-pointer top-32 left-12 lg:left-12 text-3xl lg:text-5xl font-thin text-white uppercase'>Used car</h1>
+          <h1 className='absolute cursor-pointer top-32 left-[15%] text-3xl lg:text-5xl font-thin text-white uppercase'>Used car</h1>
         </div>
         <div className='overflow-hidden relative photo'>
           <img src={img5} alt="" className='h-80 w-full' />
-          <h1 className='absolute cursor-pointer top-32 left-16 lg:left-20 text-3xl lg:text-5xl font-thin text-white uppercase'>About</h1>
+          <h1 className='absolute cursor-pointer top-32 left-[27%] text-3xl lg:text-5xl font-thin text-white uppercase'>About</h1>
         </div>
         <div className='overflow-hidden relative photo'>
           <img src={img6} alt="" className='h-80 w-full' />
-          <h1 className='absolute cursor-pointer top-32 left-12 lg:left-14 text-3xl lg:text-5xl font-thin text-white uppercase'>Contact</h1>
+          <h1 className='absolute cursor-pointer top-32 left-[17%] text-3xl lg:text-5xl font-thin text-white uppercase'>Contact</h1>
         </div>
       </div>
     </div>

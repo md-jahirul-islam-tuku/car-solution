@@ -8,10 +8,10 @@ const ServicesCard = ({ service }) => {
   const {user} = useContext(AuthContext)
   const { title, img, price, _id } = service;
   return (
-    <div className='cardContainer flex items-center'>
+    <div className='cardContainer flex justify-center items-center' data-aos="zoom-in-up" data-aos-duration="2000">
       <div className="card1 bg-gray-100">
         <figure className="imgBox">
-          <img src={img} alt="service" className='h-[22vh] animate__animated animate__pulse animate__infinite animate__slower' />
+          <img src={img} alt="service" className='h-[175px] animate__animated animate__pulse animate__infinite animate__slower' />
         </figure>
         <div className="content">
           <h2 className="text-xl font-bold text-left">{title}</h2>

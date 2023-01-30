@@ -1,4 +1,7 @@
 #slide1 img {
-   mask-image: linear-gradient(to right, rgb(0, 0, 0, 0) 0%, rgb(0, 0, 0) 120%);
-   border-radius: 0.7rem;
+   box-shadow: 0 0 10px #fff;
+   -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005)
+}
+#slide1 img:hover{
+   box-shadow: 0 0 16px #fff;
 }

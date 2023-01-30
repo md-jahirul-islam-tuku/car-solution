@@ -37,6 +37,7 @@ section{
   align-items: center;
   padding: 15px;
   perspective: 100px;
+  cursor: pointer;
 }
 .slide-track img{
   height: 100%;
