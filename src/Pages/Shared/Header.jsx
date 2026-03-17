@@ -49,7 +49,7 @@ const Header = () => {
               {menu}
             </ul>
           </div>
-          <Link to='/' className="btn btn-ghost"><img src={logo} alt="" className='h-14' /></Link>
+          <Link to='/' className="flex items-center gap-1 text-3xl font-bold text-gray-600"><img src={logo} alt="" className='h-14' />Car Solution</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
