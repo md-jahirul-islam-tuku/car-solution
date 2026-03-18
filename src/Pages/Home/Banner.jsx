@@ -4,7 +4,7 @@ import Slider from './Slider';
 
 const Banner = () => {
   return (
-    <div id="slide1" className="lg:flex bg-black items-center lg:h-[70vh] pt-10 lg:pt-0 overflow-hidden">
+    <div id="slide1" className="lg:flex bg-black items-center lg:max-h-[70vh] pt-10 lg:pt-0 overflow-hidden">
       <div className='lg:pl-10 w-4/5 mx-auto'>
         <div className="">
           <h1 className='lg:text-5xl text-xl text-white font-bold text-left'>
