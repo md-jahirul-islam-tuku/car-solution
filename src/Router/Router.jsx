@@ -7,7 +7,6 @@ import Home from "../Pages/Home/Home";
 import Orders from "../Pages/Orders/Orders";
 import Login from "../Pages/Shared/Login";
 import SignUp from "../Pages/Shared/SignUp";
-import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
    {
@@ -22,7 +21,7 @@ const router = createBrowserRouter([
          {
             path: '/checkout/:id',
             element: <CheckOut></CheckOut>,
-            loader: ({ params }) => fetch(`https://car-solution-server.vercel.app/services/${params.id}`)
+            loader: ({ params }) => fetch(`http://localhost:5001/services/${params.id}`)
          },
          {
             path: '/orders',

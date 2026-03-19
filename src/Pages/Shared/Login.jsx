@@ -22,7 +22,7 @@ const Login = () => {
           email: user.email
         }
 
-        fetch('https://car-solution-server.vercel.app/jwt', {
+        fetch('http://localhost:5001/jwt', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

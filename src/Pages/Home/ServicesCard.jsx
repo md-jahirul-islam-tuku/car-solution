@@ -1,23 +1,47 @@
-import React, { useContext } from 'react';
-import { RiArrowGoForwardLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Contexts/userContext';
-import './ServicesCard.css'
+import React, { useContext } from "react";
+import { RiArrowGoForwardLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Contexts/userContext";
+import "./ServicesCard.css";
 
 const ServicesCard = ({ service }) => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const { title, img, price, _id } = service;
   return (
-    <div className='cardContainer flex justify-center items-center' data-aos="zoom-in-up" data-aos-duration="2000">
+    <div
+      className="cardContainer flex justify-center items-center"
+      data-aos="zoom-in-up"
+      data-aos-duration="2000"
+    >
       <div className="card1 bg-gray-100">
         <figure className="imgBox">
-          <img src={img} alt="service" className='h-[175px] animate__animated animate__pulse animate__infinite animate__slower' />
+          <img
+            src={img}
+            alt="service"
+            className="h-[175px] animate__animated animate__pulse animate__infinite animate__slower bg-white"
+          />
         </figure>
         <div className="content">
           <h2 className="text-xl font-bold text-left">{title}</h2>
-          <div className='flex justify-between items-center text-error'>
-            <div className='font-bold text-lg'>Price: ${price}</div>
-            <Link to={`/checkout/${_id}`} ><button className='hover:bg-gray-300 p-2 rounded-full'><RiArrowGoForwardLine /></button></Link>
+          <div className="flex justify-between items-center text-error">
+            <div className="font-bold text-lg">Price: ${price}</div>
+            {user ? (
+              <Link
+                to={`/checkout/${_id}`}
+                className="hover:bg-gray-200 p-2 rounded-full tooltip tooltip-left tooltip-success"
+                data-tip="Place order"
+              >
+                <RiArrowGoForwardLine />
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                className="hover:bg-gray-200 p-2 rounded-full tooltip tooltip-left tooltip-success"
+                data-tip="Place order"
+              >
+                <RiArrowGoForwardLine />
+              </Link>
+            )}
           </div>
         </div>
       </div>
