@@ -4,23 +4,19 @@ import OrderDetails from "./OrderDetails";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
-  const { user, userSignOut } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
+  const email = user?.email;
   useEffect(() => {
-    fetch(`http://localhost:5001/orders?email=${user?.email}`, {
+    fetch(`http://localhost:5001/orders?email=${email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("car-token")}`,
       },
     })
-      .then((res) => {
-        if (res.status === 401 || res.status === 403) {
-          return userSignOut();
-        }
-        return res.json();
-      })
+      .then((res) => res.json())
       .then((data) => {
         setOrders(data);
       });
-  }, [user?.email, userSignOut]);
+  }, [email]);
   const handleDelete = (id) => {
     const proceed = window.confirm("Make sure you delete this order.");
     if (proceed) {
@@ -54,7 +50,7 @@ const Orders = () => {
               <th>Delete</th>
             </tr>
           </thead>
-          <tbody className="bg-red-100">
+          <tbody className="bg-red-100 divide-y dark:divide-primary/30">
             {orders.map((order) => (
               <OrderDetails
                 key={order._id}
