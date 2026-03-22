@@ -1,14 +1,29 @@
 import React, { useEffect, useState } from "react";
-import ServicesCard from "./ServicesCard";
-import { Link } from "react-router-dom";
+import ServicesCard from "../Home/ServicesCard";
+import PageLoader from "../../Loader/PageLoader";
 
-const Services = () => {
+const MoreServices = () => {
   const [services, setServices] = useState([]);
+  const [loading, setLoading] = useState(true); // loading state
+
   useEffect(() => {
     fetch("http://localhost:5001/services")
       .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, [services]);
+      .then((data) => {
+        setServices(data);
+        setLoading(false); // loading off
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []); // ✅ fix here
+
+  // ✅ Loader show
+  if (loading) {
+    return <PageLoader fullScreen />;
+  }
+
   return (
     <div id="services" className="text-center">
       <div className="py-10" data-aos="zoom-in-up" data-aos-duration="2000">
@@ -17,19 +32,17 @@ const Services = () => {
         <p className="text-xl">
           The majority have suffered alteration in some form, by injected
           humour, or Randomized <br /> words which don't look even slightly
-          believable.{" "}
+          believable.
         </p>
       </div>
-      <div className="grid lg:grid-cols-3">
-        {services.slice(0, 3).map((service) => (
-          <ServicesCard key={service._id} service={service}></ServicesCard>
+
+      <div className="grid lg:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <ServicesCard key={service._id} service={service} />
         ))}
       </div>
-      <Link to={"/more-services"} className="btn btn-outline btn-error">
-        More Services
-      </Link>
     </div>
   );
 };
 
-export default Services;
+export default MoreServices;
