@@ -8,6 +8,7 @@ import Orders from "../Pages/Orders/Orders";
 import Login from "../Pages/Shared/Login";
 import SignUp from "../Pages/Shared/SignUp";
 import MoreServices from "../Pages/MoreServices/MoreServices";
+import MoreProducts from "../Pages/MoreProducts/MoreProducts";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/more-services",
         element: <MoreServices />,
+      },
+      {
+        path: "/more-products",
+        element: <MoreProducts />,
       },
     ],
   },

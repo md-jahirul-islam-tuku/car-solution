@@ -1,16 +1,28 @@
 import React, { useEffect, useState } from "react";
-import Product from "./Product";
-import { Link } from "react-router-dom";
+import Product from "../Home/Product";
+import PageLoader from "../../Loader/PageLoader";
 
-const PopularProducts = () => {
+const MoreProducts = () => {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     fetch("http://localhost:5001/products")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => {
+        setProducts(data);
+        setLoading(false); // loading off
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
   }, []);
+  // ✅ Loader show
+  if (loading) {
+    return <PageLoader fullScreen />;
+  }
   return (
-    <div id="products" className="text-center">
+    <div id="products" className="text-center mb-20">
       <div className="py-10" data-aos="zoom-in-up" data-aos-duration="2000">
         <h5 className="font-bold text-error text-lg">Popular Products</h5>
         <h1 className="text-5xl font-bold">Browse Our Products</h1>
@@ -21,15 +33,12 @@ const PopularProducts = () => {
         </p>
       </div>
       <div className="grid lg:grid-cols-3 gap-10">
-        {products.slice(0, 3).map((product) => (
+        {products.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <Link to={"/more-products"} className="btn btn-outline btn-error my-10">
-        More Products
-      </Link>
     </div>
   );
 };
 
-export default PopularProducts;
+export default MoreProducts;
