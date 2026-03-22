@@ -25,7 +25,7 @@ const PopularProducts = () => {
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <Link to={"/more-products"} className="btn btn-outline btn-error my-10">
+      <Link to={"/more-products"} className="btn btn-outline btn-error mt-20">
         More Products
       </Link>
     </div>

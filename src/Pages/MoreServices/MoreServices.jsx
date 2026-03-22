@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ServicesCard from "../Home/ServicesCard";
 import PageLoader from "../../Loader/PageLoader";
+import ScrollToTop from "react-scroll-to-top";
 
 const MoreServices = () => {
   const [services, setServices] = useState([]);
@@ -26,6 +27,15 @@ const MoreServices = () => {
 
   return (
     <div id="services" className="text-center">
+      <ScrollToTop
+        color="white"
+        smooth={true}
+        viewBox="0 0 150 280"
+        style={{
+          background: "linear-gradient(135deg, #e42daa, #6a11cb)",
+          borderRadius: "50%",
+        }}
+      />
       <div className="py-10" data-aos="zoom-in-up" data-aos-duration="2000">
         <h4 className="font-bold text-error text-lg">Services</h4>
         <h1 className="text-5xl font-bold">Our Service Area</h1>
