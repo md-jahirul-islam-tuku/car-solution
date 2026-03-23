@@ -45,7 +45,7 @@ const ContactForm = () => {
     e.target.reset();
   };
   return (
-    <div className="lg:w-[67vw] lg:h-[70vh] 2xl:w-[50vw] mx-auto rounded-xl">
+    <div className="lg:w-[67vw] lg:h-[70vh] 2xl:w-[50vw] mx-auto rounded-xl mb-20">
       <h1
         data-aos="fade-down"
         data-aos-easing="linear"
