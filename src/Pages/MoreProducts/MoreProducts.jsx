@@ -24,7 +24,7 @@ const MoreProducts = () => {
   return (
     <div
       id="products"
-      className="text-center mb-20 max-w-[1280px] mx-auto lg:px-0 px-6"
+      className="text-center mb-20 max-w-[1280px] mx-auto lg:px-0 px-6 mt-16"
     >
       <div className="py-10" data-aos="zoom-in-up" data-aos-duration="2000">
         <h5 className="font-bold text-error text-lg">Popular Products</h5>

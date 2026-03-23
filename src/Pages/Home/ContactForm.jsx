@@ -45,7 +45,7 @@ const ContactForm = () => {
     e.target.reset();
   };
   return (
-    <div className="lg:w-[67vw] lg:h-[70vh] 2xl:w-[50vw] mx-auto rounded-xl mb-20">
+    <div className="lg:w-[67vw] 2xl:w-[50vw] mx-auto rounded-xl mb-10">
       <h1
         data-aos="fade-down"
         data-aos-easing="linear"
@@ -120,7 +120,7 @@ const ContactForm = () => {
             <div className="lg:flex items-center justify-between">
               <button
                 type="submit"
-                className="btn btn-primary w-32 lg:flex my-5 text-lg tooltip tooltip-secondary tooltip-right normal-case"
+                className="btn btn-primary w-32 flex my-5 text-lg tooltip tooltip-secondary tooltip-right normal-case"
                 data-tip="To: mdjahirulislamtuku@gmail.com"
               >
                 {loading ? (
