@@ -16,9 +16,9 @@ const Main = () => {
           borderRadius: "50%",
         }}
       />
-      <Header></Header>
-      <Outlet></Outlet>
-      <Footer></Footer>
+      <Header />
+      <Outlet />
+      <Footer />
     </div>
   );
 };
