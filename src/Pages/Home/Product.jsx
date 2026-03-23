@@ -5,8 +5,8 @@ const Product = ({product}) => {
    const {name, img, price} = product;
    return (
       <div className="cursor-pointer card w-full rounded-none shadow-xl bg-gray-100" data-aos="zoom-in-up" data-aos-duration="2000">
-         <figure className="px-3 pt-3">
-            <img src={img} alt="products" className="h-[28vh] animate__animated animate__pulse animate__infinite animate__slower" />
+         <figure className="px-3 pt-3 bg-white animate__animated animate__pulse animate__infinite animate__slower">
+            <img src={img} alt="products" className="h-[28vh]" />
          </figure>
          <div className="card-body items-center text-center">
             <div className='flex text-lg gap-1'>

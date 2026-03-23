@@ -23,7 +23,7 @@ const MoreProducts = () => {
     return <PageLoader fullScreen />;
   }
   return (
-    <div id="products" className="text-center mb-20">
+    <div id="products" className="text-center mb-20 max-w-[1280px] mx-auto lg:px-0 px-6">
       <ScrollToTop
         color="white"
         smooth={true}
