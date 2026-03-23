@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Contexts/userContext";
 import logo from "../../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -9,6 +9,8 @@ import { useState } from "react";
 const Header = () => {
   const [view, setView] = useState(true);
   const { user, userSignOut } = useContext(AuthContext);
+  const location = useLocation();
+  const showSubMenu = location.pathname === "/";
   const handleSignOut = () => {
     userSignOut()
       .then(() => {})
@@ -20,43 +22,47 @@ const Header = () => {
         <li className="font-semibold">
           <Link tabIndex={0} className="uppercase justify-between" to="/">
             Home
-            <svg
-              className="fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-            >
-              <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-            </svg>
+            {showSubMenu && (
+              <svg
+                className="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
+            )}
           </Link>
-          <ul className="p-2 z-50 bg-white">
-            <li className="font-semibold">
-              <AnchorLink className="uppercase" href="#services">
-                Services
-              </AnchorLink>
-            </li>
-            <li className="font-semibold">
-              <AnchorLink className="uppercase" href="#products">
-                Products
-              </AnchorLink>
-            </li>
-            <li className="font-semibold">
-              <AnchorLink className="uppercase" href="#about">
-                About
-              </AnchorLink>
-            </li>
-            <li className="font-semibold">
-              <AnchorLink className="uppercase" href="#usedCar">
-                Car Sale
-              </AnchorLink>
-            </li>
-            <li className="font-semibold">
-              <AnchorLink className="uppercase" href="#contact">
-                Contact
-              </AnchorLink>
-            </li>
-          </ul>
+          {showSubMenu && (
+            <ul className="p-2 z-50 bg-white">
+              <li className="font-semibold">
+                <AnchorLink className="uppercase" href="#services">
+                  Services
+                </AnchorLink>
+              </li>
+              <li className="font-semibold">
+                <AnchorLink className="uppercase" href="#products">
+                  Products
+                </AnchorLink>
+              </li>
+              <li className="font-semibold">
+                <AnchorLink className="uppercase" href="#about">
+                  About
+                </AnchorLink>
+              </li>
+              <li className="font-semibold">
+                <AnchorLink className="uppercase" href="#usedCar">
+                  Car Sale
+                </AnchorLink>
+              </li>
+              <li className="font-semibold">
+                <AnchorLink className="uppercase" href="#contact">
+                  Contact
+                </AnchorLink>
+              </li>
+            </ul>
+          )}
         </li>
       ) : (
         <li className="font-semibold">

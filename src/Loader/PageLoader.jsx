@@ -5,7 +5,7 @@ const PageLoader = ({ fullScreen = false }) => {
     <div
       className={`${
         fullScreen
-          ? "fixed inset-0 bg-black/30 backdrop-blur-sm z-50"
+          ? "fixed inset-0 backdrop-blur-sm z-50"
           : "w-full h-full"
       } flex items-center justify-center`}
     >
@@ -19,17 +19,9 @@ const PageLoader = ({ fullScreen = false }) => {
 
         {/* Inner Glow Circle */}
         <div
-          className="absolute w-12 h-12 bg-base-100 dark:bg-slate-900 
+          className="absolute w-12 h-12 bg-base-100
         rounded-full shadow-xl"
         ></div>
-
-        {/* Loading Text */}
-        <p
-          className="mt-6 text-lg font-semibold bg-gradient-to-r 
-        from-info to-accent bg-clip-text text-transparent animate-pulse"
-        >
-          Loading...
-        </p>
       </div>
     </div>
   );
